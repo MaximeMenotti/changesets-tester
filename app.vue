@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Version 0.1</p>
+    <pre>Version 0.1.0</pre>
     <NuxtWelcome />
   </div>
 </template>
