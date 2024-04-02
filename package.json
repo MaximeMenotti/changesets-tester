@@ -1,0 +1,19 @@
+{
+  "name": "changesets-tester",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.48.8",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1"
+  }
+}
