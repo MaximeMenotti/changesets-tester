@@ -2,6 +2,7 @@
   "name": "changesets-tester",
   "type": "module",
   "private": true,
+  "version": "0.1.0",
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",

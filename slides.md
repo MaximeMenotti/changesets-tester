@@ -83,7 +83,7 @@ yarn changeset init
 
 
 ---
-layout: image-left
+layout: center
 image: https://cover.sli.dev?2
 ---
 
@@ -92,15 +92,58 @@ image: https://cover.sli.dev?2
 
 Once you have done all you changes, you can ask changesets to generate changes metadata:
 
+````md magic-move
 ```shell
-npm install @changesets/cli && npx changeset init
+➜ yarn changeset
+yarn run v1.22.19
+🦋  What kind of change is this for changesets-tester? (current version is 0.1.0) … 
+❯ patch
+  minor
+  major
 ```
-or
+
 
 ```shell
-yarn add @changesets/cli && yarn changeset init
+➜ yarn changeset
+yarn run v1.22.19
+🦋  What kind of change is this for changesets-tester? (current version is 0.1.0) · minor
+🦋  Please enter a summary for this change (this will be in the changelogs).
+🦋    (submit empty line to open external editor)
+🦋  Summary › add base slide 
 ```
 
+```shell
+➜ yarn changeset
+yarn run v1.22.19
+🦋  What kind of change is this for changesets-tester? (current version is 0.1.0) · minor
+🦋  Please enter a summary for this change (this will be in the changelogs).
+🦋    (submit empty line to open external editor)
+🦋  Summary · add base slide
+🦋  
+🦋  === Summary of changesets ===
+🦋  minor:  changesets-tester
+🦋  
+🦋  Is this your desired changeset? (Y/n) › true
+```
+
+```shell
+➜ yarn changeset
+yarn run v1.22.19
+🦋  What kind of change is this for changesets-tester? (current version is 0.1.0) · minor
+🦋  Please enter a summary for this change (this will be in the changelogs).
+🦋    (submit empty line to open external editor)
+🦋  Summary · add base slide
+🦋  
+🦋  === Summary of changesets ===
+🦋  minor:  changesets-tester
+🦋  
+🦋  Is this your desired changeset? (Y/n) · true
+🦋  Changeset added! - you can now commit it
+🦋  
+🦋  If you want to modify or expand on the changeset summary, you can find it here
+🦋  info /Users/mac-MMENOT19/Sites/changesets-tester/.changeset/large-items-invite.md
+```
+````
 ---
 layout: image-left
 image: https://cover.sli.dev?3
