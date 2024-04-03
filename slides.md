@@ -103,7 +103,7 @@ yarn run v1.22.19
 ```
 
 
-```shell
+```shell {4-6}
 ➜ yarn changeset
 yarn run v1.22.19
 🦋  What kind of change is this for changesets-tester? (current version is 0.1.0) · minor
@@ -112,8 +112,8 @@ yarn run v1.22.19
 🦋  Summary › add base slide 
 ```
 
-```shell
-➜ yarn changeset
+```shell {8-10}
+➜ yarn changeset 
 yarn run v1.22.19
 🦋  What kind of change is this for changesets-tester? (current version is 0.1.0) · minor
 🦋  Please enter a summary for this change (this will be in the changelogs).
@@ -126,7 +126,7 @@ yarn run v1.22.19
 🦋  Is this your desired changeset? (Y/n) › true
 ```
 
-```shell
+```shell {10-12}
 ➜ yarn changeset
 yarn run v1.22.19
 🦋  What kind of change is this for changesets-tester? (current version is 0.1.0) · minor
@@ -143,102 +143,45 @@ yarn run v1.22.19
 🦋  If you want to modify or expand on the changeset summary, you can find it here
 🦋  info /Users/mac-MMENOT19/Sites/changesets-tester/.changeset/large-items-invite.md
 ```
+
 ````
 ---
-layout: image-left
-image: https://cover.sli.dev?3
+level: 2
 ---
 
-<!-- Footer -->
-test
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
+# Create a new version
 
-<!-- Inline style -->
-<style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
+```shell
+➜ yarn changeset version
+```
+
+This will:
+
+- Compile all changesets to add to the `CHANGELOG.md`
+- Create a new version using semver depending on changes
+- Update the version in `package.json`
+
+<br/> 
 
 ---
 level: 2
 ---
 
-# Shiki Magic Move
+# Changelog sample 
 
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
+```md
+# changesets-tester
 
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
+## 0.2.0
 
-````md magic-move
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
+### Minor Changes
+
+- 9cd5249: add base slide
+
+### Patch Changes
+
+- 9cd5249: add slides for version
 ```
-
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
-    }
-  }
-}
-```
-
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
-}
-```
-
-Non-code blocks are ignored.
-
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-}
-</script>
-```
-````
 
 ---
 
